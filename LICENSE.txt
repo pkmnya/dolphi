@@ -1,0 +1,152 @@
+==========================================================
+软件版权声明 / Software Copyright Notice
+==========================================================
+Copyright (c) 2026-2026 Dolphi Packer. All rights reserved
+
+本软件（Dolphi）为专有闭源软件，保留所有权利。
+未经作者明确书面许可，任何人不得对本软件的全部或部分进行逆向工程、反编译、反汇编，或在未经授权的情况下进行任何形式的商业化使用与分发。
+
+This software (Dolphi) is proprietary and closed-source. All rights reserved.
+Unauthorized reverse engineering, decompilation, disassembly, distribution, or commercial use of this software, in whole or in part, without explicit written permission from the author is strictly prohibited.
+
+
+==========================================================
+致谢与开源声明 / Acknowledgments & Open Source Licenses
+==========================================================
+本软件的诞生离不开以下优秀开源项目与工具的支持，在此表达最诚挚的感谢：
+The creation of this software would not have been possible without the support of the following outstanding open-source projects and tools. We would like to express our most sincere gratitude to:
+
+[特别鸣谢 / Special Thanks]
+
+UPX (https://github.com/upx/upx)
+感谢 UPX 提供的极致压缩技术，让本软件的自释放模块体积大幅缩减。
+Thanks to UPX for providing extreme compression technology, which significantly reduces the size of our self-extracting module.
+
+7-Zip-zstd (https://github.com/mcmilk/7-Zip-zstd)
+本软件的设计理念与部分灵感来源于该优秀的分支项目。
+The design philosophy and some inspiration for this software were derived from this excellent fork project.
+
+WinRAR (https://www.win-rar.com)
+感谢 WinRAR 多年来在解压缩领域的深耕，本软件的交互与 UI 设计深受其启发。
+Thanks to WinRAR for its years of dedication to the decompression field. The interaction and UI design of this software are deeply inspired by it.
+
+
+[开源组件协议 / Open Source Component Licenses]
+
+本软件包含由第三方编写的开源代码。根据开源协议，特此声明并附带其原始许可证：
+This software contains open-source code authored by third parties. In compliance with the respective open-source licenses, we hereby declare and attach their original licenses below:
+
+----------------------------------------------------------
+1. Zstandard (zstd) - [BSD 3-Clause License]
+----------------------------------------------------------
+Copyright (c) Meta Platforms, Inc. and affiliates. All rights reserved.
+
+Redistribution and use in source and binary forms, with or without modification,
+are permitted provided that the following conditions are met:
+
+* Redistributions of source code must retain the above copyright notice, this
+  list of conditions and the following disclaimer.
+
+* Redistributions in binary form must reproduce the above copyright notice,
+  this list of conditions and the following disclaimer in the documentation
+  and/or other materials provided with the distribution.
+
+* Neither the name Meta nor the names of its contributors may be used to
+  endorse or promote products derived from this software without specific
+  prior written permission.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND
+ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
+WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR
+ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES
+(INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
+LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON
+ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+(INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
+SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+
+----------------------------------------------------------
+2. mpack (MessagePack C encoder/decoder) -
+ [MIT License]
+----------------------------------------------------------
+Copyright (c) 2015-2021 Nicholas Frazer.
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+
+----------------------------------------------------------
+3. Monocypher (Cryptographic Library) -
+ [CC0 1.0 Universal / BSD 2-Clause]
+----------------------------------------------------------
+Copyright (c) 2017-2023, Loup Vaillant and contributors.
+
+Monocypher is dual-licensed under CC0 1.0 Universal (Public Domain) and the BSD 2-Clause License. We acknowledge its use under the BSD 2-Clause License:
+
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions are met:
+
+1. Redistributions of source code must retain the above copyright notice, this
+   list of conditions and the following disclaimer.
+2. Redistributions in binary form must reproduce the above copyright notice,
+   this list of conditions and the following disclaimer in the documentation
+   and/or other materials provided with the distribution.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND
+ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
+WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR
+ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES
+(INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
+LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND
+ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+(INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
+SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+
+----------------------------------------------------------
+4. CRC64 Implementation -
+[Public Domain / Open Source Standard]
+----------------------------------------------------------
+The CRC64 algorithm implementation used in this software is based on standard mathematical polynomials and open-source reference implementations, typically falling under Public Domain or permissive BSD-style licenses. We acknowledge the open-source community for laying the mathematical and programmatic foundations for data integrity verification.
+
+----------------------------------------------------------
+5. zlib (zlib License)
+----------------------------------------------------------
+Copyright (C) 1995-2024 Jean-loup Gailly and Mark Adler
+
+This software is provided 'as-is', without any express or implied
+warranty.  In no event will the authors be held liable for any damages
+arising from the use of this software.
+
+Permission is granted to anyone to use this software for any purpose,
+including commercial applications, and to alter it and redistribute it
+freely, subject to the following restrictions:
+
+1. The origin of this software must not be misrepresented; you must not
+   claim that you wrote the original software. If you use this software
+   in a product, an acknowledgment in the product documentation would be
+   appreciated but is not required.
+2. Altered source versions must be plainly marked as such, and must not be
+   misrepresented as being the original software.
+3. This notice may not be removed or altered from any source distribution.
+
+Jean-loup Gailly        Mark Adler
+jloup@gzip.org          madler@alumni.caltech.edu
