@@ -2,6 +2,18 @@
 
 [简体中文](#简体中文) | [English](#english)
 
+<div align="center">
+  <h3>支持分卷压缩 / Multi-volume Archive Support</h3>
+  <img src="demo_quick.gif" width="100%" alt="Quick Mode Demo" />
+</div>
+
+<br>
+
+<div align="center">
+  <h3>支持四种语言 / 4 Languages Supported</h3>
+  <video src="demo_install.mp4" controls="controls" width="100%" muted="muted"></video>
+</div>
+
 ---
 
 <a id="简体中文"></a>
