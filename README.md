@@ -25,6 +25,8 @@
 
 ### 📥 下载安装
 👉 **[点击此处前往 Release 下载最新版本](https://github.com/pkmnya/dolphi/releases/latest)**
+**[蓝奏云](https://www.ilanzou.com/s/F4ELQ6Xp)**
+**[QQ群](https://qm.qq.com/q/wdYINMkdIA)**
 
 ---
 
