@@ -1,27 +1,6 @@
 # Dolphi - Zstd Windows Compression Tool 
 
-[English](#english) | [简体中文](#简体中文)
-
----
-
-<a id="english"></a>
-## 🇬🇧 English
-
-⚠️ **Beta Version Warning:**  
-*This software is currently in the **Beta** stage. It may contain severe bugs. Please use it with caution and do not use it to process critical data without making backups first.*
-
-### 📝 Introduction
-**Dolphi** is a simple, easy-to-use, and lightning-fast Windows compression utility powered by the **Zstandard (zstd)** algorithm. 
-
-### ✨ Features
-*   **Installer Packaging Wizard:** Running the main `dolphi` executable opens the packaging wizard, allowing you to easily pack files into standalone installers complete with registry integration and uninstaller capabilities.
-*   **Context Menu Integration:** Once installed, Dolphi adds a convenient "quick compression" feature directly to your Windows right-click menu.
-*   **One-click Portable Operation:** Supports intuitive, portable one-click compression and one-click decompression.
-*   **High Performance:** Built on the highly efficient Zstandard (zstd) algorithm, offering an excellent balance between compression speed and ratio.
-*   **Multilingual Support:** 🇺🇸 English | 🇨🇳 Simplified Chinese | 🇯🇵 Japanese | 🇷🇺 Russian.
-
-### 📥 Download
-👉 **[Download the Latest Release Here](https://github.com/pkmnya/dolphi/releases/latest)**
+[简体中文](#简体中文) | [English](#english)
 
 ---
 
@@ -41,7 +20,34 @@
 *   **高性能：** 采用 Zstandard (zstd) 算法，在压缩率与速度之间取得绝佳平衡。
 *   **多语言支持：** 🇨🇳 简体中文 | 🇺🇸 英语 | 🇯🇵 日语 | 🇷🇺 俄语。
 
+### 🤖 开发方式
+本项目深度使用了 **Gemini** 进行辅助编程，采用 **vibecoding** 方式完成构建。
+
 ### 📥 下载安装
 👉 **[点击此处前往 Release 下载最新版本](https://github.com/pkmnya/dolphi/releases/latest)**
+
+---
+
+<a id="english"></a>
+## 🇬🇧 English
+
+⚠️ **Beta Version Warning:**  
+*This software is currently in the **Beta** stage. It may contain severe bugs. Please use it with caution and do not use it to process critical data without making backups first.*
+
+### 📝 Introduction
+**Dolphi** is a simple, easy-to-use, and lightning-fast Windows compression utility powered by the **Zstandard (zstd)** algorithm. 
+
+### ✨ Features
+*   **Installer Packaging Wizard:** Running the main `dolphi` executable opens the packaging wizard, allowing you to easily pack files into standalone installers complete with registry integration and uninstaller capabilities.
+*   **Context Menu Integration:** Once installed, Dolphi adds a convenient "quick compression" feature directly to your Windows right-click menu.
+*   **One-click Portable Operation:** Supports intuitive, portable one-click compression and one-click decompression.
+*   **High Performance:** Built on the highly efficient Zstandard (zstd) algorithm, offering an excellent balance between compression speed and ratio.
+*   **Multilingual Support:** 🇺🇸 English | 🇨🇳 Simplified Chinese | 🇯🇵 Japanese | 🇷🇺 Russian.
+
+### 🤖 Development Method
+This project deeply utilized **Gemini** for programming assistance and was built using the **vibecoding** approach.
+
+### 📥 Download
+👉 **[Download the Latest Release Here](https://github.com/pkmnya/dolphi/releases/latest)**
 
 ---
