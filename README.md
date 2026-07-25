@@ -12,7 +12,7 @@
 <div align="center">
   <h3>Install Mode Demo [支持四种语言 / 4 Languages Supported]</h3>
   <!-- 为视频添加了自动播放、循环播放和移动端内联播放属性 -->
-  <video src="demo_install.mp4" controls="controls" autoplay="autoplay" loop="loop" muted="muted" playsinline="playsinline" width="50%"></video>
+  <video src="https://raw.githubusercontent.com/pkmnya/main/demo_install.mp4" controls="controls" autoplay="autoplay" loop="loop" muted="muted" playsinline="playsinline" width="50%"></video>
 </div>
 
 ---
