@@ -3,15 +3,16 @@
 [简体中文](#简体中文) | [English](#english)
 
 <div align="center">
-  <h3>支持分卷压缩 / Multi-volume Archive Support</h3>
-  <img src="demo_quick.gif" width="100%" alt="Quick Mode Demo" />
+  <h3>Quick Mode Demo [支持分卷压缩 / Multi-volume Archive Support]</h3>
+  <img src="demo_quick.gif" width="50%" alt="Quick Mode Demo" />
 </div>
 
 <br>
 
 <div align="center">
-  <h3>支持四种语言 / 4 Languages Supported</h3>
-  <video src="demo_install.mp4" controls="controls" width="100%" muted="muted"></video>
+  <h3>Install Mode Demo [支持四种语言 / 4 Languages Supported]</h3>
+  <!-- 为视频添加了自动播放、循环播放和移动端内联播放属性 -->
+  <video src="demo_install.mp4" controls="controls" autoplay="autoplay" loop="loop" muted="muted" playsinline="playsinline" width="50%"></video>
 </div>
 
 ---
