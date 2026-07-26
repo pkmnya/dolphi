@@ -4,14 +4,14 @@
 
 <div align="center">
   <h3>Quick Mode Demo [支持分卷压缩 / Multi-volume Archive Support]</h3>
-  <img src="demo_quick.gif" width="50%" alt="Quick Mode Demo" />
+  <img src="demo_quick.gif" width="72%" alt="Quick Mode Demo" />
 </div>
 
 <br>
 
 <div align="center">
   <h3>Install Mode Demo [支持四种语言 / 4 Languages Supported]</h3>
-  <img src="demo_install.gif" width="50%" alt="Quick Mode Demo" />
+  <img src="demo_install.gif" width="72%" alt="Quick Mode Demo" />
 </div>
 
 ---
