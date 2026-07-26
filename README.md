@@ -31,6 +31,7 @@
 *   **一键便携操作：** 支持独立、便携式的一键压缩与一键解压功能。
 *   **高性能：** 采用 Zstandard (Zstd) 算法，在压缩率与速度之间取得绝佳平衡。
 *   **多语言支持：** 🇨🇳 简体中文 | 🇺🇸 英语 | 🇯🇵 日语 | 🇷🇺 俄语。
+*   基于清单的卸载程序，不会误删配置文件与产生跨路径误删行为（没有高强度测试该功能）
 
 ### 💻 兼容性
 *   **系统支持：** 目前已在 Windows 7 Latest (United States) 与 Windows 11 (China) 上完成了基础功能的全路径测试 (Full-path Testing) 并顺利通过。
@@ -60,6 +61,7 @@
 *   **One-click Portable Operation:** Supports intuitive, portable one-click compression and one-click decompression.
 *   **High Performance:** Built on the Zstandard (Zstd) algorithm, offering an excellent balance between compression speed and ratio.
 *   **Multilingual Support:** 🇺🇸 English | 🇨🇳 Simplified Chinese | 🇯🇵 Japanese | 🇷🇺 Russian.
+*   The uninstaller based on the manifest will not accidentally delete configuration files or cause accidental deletion across paths (this feature has not been rigorously tested).
 
 ### 💻 Compatibility
 *   **OS Support:** Basic functional full-path testing has been successfully completed and passed on Windows 7 Latest (US) and Windows 11 (CN).
