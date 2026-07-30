@@ -61,6 +61,39 @@ Dolphi 支持通过 INI 配置文件进行命令行级别的自动化打包。�
 *   **最新版本下载：** [GitHub Releases](https://github.com/pkmnya/dolphi/releases/latest)
 *   **交流反馈（QQ群）：** [点击加入](https://qm.qq.com/q/wdYINMkdIA)
 
+
+# 🧩 为什么选择 Zstandard (Zstd)
+## Zstd 简介：速度与体积的高效平衡
+如果您不了解 Zstd，可以简单将其理解为：相比于追求极限压缩率的传统算法，Zstd 更注重现代文件分发中的**速度体验**。其核心设计目标是在压缩速度、文件体积和释放（解压）速度之间取得最高效的平衡。
+根据 Zstandard 官方基准测试，Zstd 具备极高的解压吞吐能力：
+ * 单核心解压速度可达到接近 **1GB/s 级别**。
+ * 低压缩等级下可提供极高的压缩处理速度，非常适合快速生成发布包。
+因此，Zstd 特别适合：软件发布、游戏资源分发、更新补丁、大型文件分享以及个人用户的大型数据备份与快速恢复。
+## Dolphi 场景实测对比
+在 Dolphi 的实际测试场景中（约 2GB 数据，包含约 2000 个零碎文件），我们采用了高速压缩模式进行对比：
+ * **传统高压缩率算法**：即便调整至最低压缩等级和最高速度参数，仍需约 **20 秒**完成压缩。
+ * **Zstd（Level 3 高速模式）**：仅需约 **5 秒**即可完成。
+ * **代价**：压缩后的文件体积从约 1.2GB 增加至约 1.35GB。
+**结论：增加约 10%～15% 的文件体积，可以换取约 4 倍的打包速度提升。**
+## 核心优势与适用场景
+Zstd 的优势大小取决于您的核心目标：
+ 1. **高速分发与备份**：在低压缩等级下，Zstd 处理速度极快，是快速生成发布包、日常文件传输和备份的理想选择。
+ 2. **解压体验至上**：Zstd 的核心杀手锏在于释放阶段。即使在较高压缩等级下，它依然能保持极高的解压效率，这对于减少接收者等待时间至关重要。
+ 3. **劣势提醒**：如果在相同（极小）压缩体积的要求下，Zstd 的压缩速度通常会处于极大劣势；若只追求极限小体积（如大型企业长期归档、降低海量分发成本），传统高压缩率算法经过长期优化，依然占据绝对优势。
+## 为什么 Dolphi 选择 Zstd？
+大型企业发行和长期归档可能在意极限压缩率，但 Dolphi 面向的是另一类实际需求群体：
+ * 第三方游戏与软件打包者
+ * 独立开发者
+ * 资源分享者
+ * 需要频繁制作和传输文件的个人用户
+这些用户通常通过网盘、聊天工具或临时分享方式传播文件。对他们而言，用少量的体积增加换取全流程的提速，往往是更合理的选择：
+ * **更快打包**：减少发布者的等待时间。
+ * **更快上传分享**：提升分发效率。
+ * **更快释放**：让接收者能以最快速度开始使用。
+如果您感兴趣，可以尝试用 20GB 的数据进行实际对比。您可能会发现：压缩过程只是开始，真正影响用户体验的往往是最后的释放速度。
+Dolphi 选择 Zstd，不是为了制造“最小的压缩包”，而是为了优化完整的数据交付流程：
+**更快打包，更快备份，更快释放，更快开始使用。**
+
 ---
 
 <a id="english"></a>
@@ -107,3 +140,38 @@ Dolphi integrates directly into the Windows context menu. You can perform standa
 ### Download
 
 *   **Latest Release:** [GitHub Releases](https://github.com/pkmnya/dolphi/releases/latest)
+
+# 🧩 Why We Chose Zstandard (Zstd)
+## Introduction: An Efficient Balance of Speed and Size
+If you are unfamiliar with Zstd, you can simply understand it this way: while traditional compression algorithms often prioritize minimizing file size, Zstd focuses on the **speed experience** in modern file distribution. Its core design goal is to achieve an efficient balance among compression speed, file size, and decompression speed.
+According to official Zstandard benchmarks, Zstd boasts exceptionally high decompression throughput:
+ * Single-core decompression speeds can reach nearly **1GB/s**.
+ * Lower compression levels provide extremely fast processing speeds, making it ideal for quickly generating release packages.
+Therefore, Zstd is particularly suited for: software releases, game resource distribution, update patches, large file sharing, and large-scale data backup & rapid recovery for individual users.
+## Real-World Testing with Dolphi
+In Dolphi's practical test scenarios (using approx. 2GB of data containing about 2,000 fragmented files), we compared high-speed compression modes:
+ * **Traditional high-compression algorithms:** Even when tuned to lower compression levels and maximum speed parameters, they still required about **20 seconds** to complete.
+ * **Zstd (Level 3 High-Speed Mode):** Completed the task in just about **5 seconds**.
+ * **The Trade-off:** The compressed file size increased from roughly 1.2GB to 1.35GB.
+**The takeaway: A 10% to 15% increase in file size can yield an approximate 4x improvement in packaging speed.**
+## Core Advantages and Trade-offs
+The benefits of Zstd depend heavily on your specific goals:
+ 1. **High-Speed Distribution and Backup:** At lower compression levels, Zstd offers incredibly high processing speeds, making it perfect for rapid package generation, routine file transfers, and backups.
+ 2. **Superior Decompression Experience:** Zstd's true core advantage lies in the extraction phase. Even at higher compression levels, it maintains excellent decompression efficiency, which is crucial for minimizing the end-user's wait time.
+ 3. **Limitations:** If the goal is to reach the extremely small file sizes of traditional algorithms, Zstd requires higher compression levels and more computational resources, putting its compression speed at a severe disadvantage. For long-term archiving or enterprise-scale distribution where absolute minimum size is critical, traditional high-compression algorithms still dominate.
+## Why Dolphi Chose Zstd
+While large enterprises might focus on extreme compression ratios to cut massive storage and distribution costs, Dolphi targets a different set of practical needs:
+ * Third-party game and software packagers
+ * Independent developers
+ * Resource sharers
+ * Individual users who frequently create and transfer files
+These users typically distribute files via cloud drives, chat apps, or temporary sharing links. For them, trading a small increase in file size for an overall speedup across the entire workflow is a much more reasonable choice:
+ * **Faster packaging:** Reduces wait times for publishers.
+ * **Faster uploading and sharing:** Improves distribution efficiency.
+ * **Faster extraction:** Allows recipients to start using the files almost immediately.
+If you're curious, try running a real-world comparison with 20GB of data. You might realize that the compression process is just the beginning—it's the final decompression speed that truly dictates the user experience.
+Dolphi chose Zstd not to create the "smallest possible archive," but to optimize the entire data delivery pipeline:
+**Faster packaging, faster backups, faster extraction, faster usage.**
+
+
+
