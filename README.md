@@ -1,77 +1,105 @@
-# Dolphi - Zstd Windows Compression Tool 
+# Dolphi
+
+**高效的 Windows 压缩与分发工具**
+
+Dolphi 是一款基于 **Zstandard (Zstd)** 算法的轻量级 Windows 压缩与分发工具。
+
+与仅追求极限压缩率的传统解压软件不同，Dolphi 更专注于现代文件交付的完整工作流。无论是日常文件的高速打包提取，还是专业软件的独立分发与部署，Dolphi 都能为您提供更流畅、高效的体验。
 
 [简体中文](#简体中文) | [English](#english)
 
 <div align="center">
-  <h3>Quick Mode Demo [支持分卷压缩 / Multi-volume Archive Support]</h3>
-  <img src="demo_quick.gif" width="72%" alt="Quick Mode Demo" />
-</div>
-
-<br>
-
-<div align="center">
-  <h3>Install Mode Demo [支持四种语言 / 4 Languages Supported]</h3>
-  <img src="demo_install.gif" width="72%" alt="Quick Mode Demo" />
+  <img src="demo_quick.gif" width="72%" alt="Quick Mode Demo">
+  <img src="demo_install.gif" width="72%" alt="Installer Mode Demo">
 </div>
 
 ---
 
 <a id="简体中文"></a>
-## 🇨🇳 简体中文
 
-⚠️ **Beta 版本警告：**  
-*本软件目前处于 **Beta（测试）** 阶段，可能存在部分较为严重的 Bug（软件缺陷）。请谨慎使用，切勿在未备份的情况下用于处理重要数据。*
+# 🇨🇳 简体中文
 
-### 📝 项目简介
-**Dolphi** 是一个简单易用、轻量且极速的 Windows 压缩工具，底层采用高效的 **Zstandard (Zstd)** 压缩算法。
+> **Beta 版本提示**
+> Dolphi 目前处于 Beta 测试阶段。核心功能与 Windows 环境适配（如文件占用、权限、路径处理等）已完成初步测试。由于本工具涉及底层文件的压缩、释放及系统级别的安装卸载，在处理极为重要的数据前，建议您做好文件备份。欢迎在遇到问题时向我们提交 Issue。
 
-### ✨ 主要功能
-*   **安装包打包向导：** 运行 `dolphi` 主程序后将直接进入打包向导，支持将您的文件打包成带有注册表写入和卸载功能的完整安装包。
-*   **右键快捷压缩：** 软件安装后，会自动集成到 Windows 操作系统的右键菜单，提供便捷的快捷压缩功能。
-*   **一键便携操作：** 支持独立、便携式的一键压缩与一键解压功能。
-*   **高性能：** 采用 Zstandard (Zstd) 算法，在压缩率与速度之间取得绝佳平衡。
-*   **多语言支持：** 🇨🇳 简体中文 | 🇺🇸 英语 | 🇯🇵 日语 | 🇷🇺 俄语。
-*   基于清单的卸载程序，不会误删配置文件与产生跨路径误删行为（没有高强度测试该功能）
-*   生成的安装包无需本软件即可执行安装向导或自释放压缩文件,自释放程序体积目前控制在129KB,内置四国语言,自释放模式运行后自动释放到同目录下,所以您不用担心小白询问你诸如 如何解压 类似的问题.
-*   ​抗爆破加密： 支持压缩包加密功能。内置基于 AES-256 与 Monocypher 构筑的加密方案，通过增加密码验证的算力成本，有效抵御离线暴力破解。
+### 核心特性
 
-### 💻 兼容性
-*   **系统支持：** 目前已在 Windows 7 Latest (United States) 与 Windows 11 (China) 上完成了基础功能的全路径测试 (Full-path Testing) 并顺利通过。
+**基于 Zstd 的高速压缩引擎**
+Dolphi 采用现代压缩算法 Zstandard 作为核心。它在压缩速度、解压速度与压缩率之间取得了极佳的平衡，非常适合用于处理现代庞大的软件发布包、游戏资源、更新补丁及大型文件传输。
 
-### 🤖 开发方式
-本项目深度使用了 **Gemini** 进行辅助编程，采用 **Vibecoding** 方式完成构建。
+**便捷的自释放分发 (SFX)**
+只需一次打包，即可生成独立运行的自释放程序。接收者无需安装 Dolphi 或任何第三方解压软件，双击运行即可自动将文件释放至当前目录，实现真正的“即开即用”。特别适合便携版软件、游戏 MOD 及日常文件的快速分享。
 
-### 📥 下载安装
-👉 **[点击此处前往 Release 下载最新版本](https://github.com/pkmnya/dolphi/releases/latest)**
+**标准 Windows 安装包构建**
+对于有正式发布需求的开发者，Dolphi 提供了完整的 Windows 安装程序构建功能。打包者可以预设安装目录、配置注册表项并集成卸载管理，轻松打造专业、规范的软件部署流程。
 
-**[QQ群](https://qm.qq.com/q/wdYINMkdIA)**
+**广泛的 ZIP 格式兼容**
+在提供专属分发能力的同时，Dolphi 依然支持输出标准的 ZIP 格式压缩包。当您需要与 macOS、Linux 用户进行文件交换，或需要兼容第三方解压工具时，ZIP 格式能确保文件畅通无阻。
+
+**灵活的分卷压缩**
+面对超大文件或网盘上传体积限制，Dolphi 支持将大型压缩文件分割为多个分卷，让大文件的管理、传输和发布变得更加从容。
+
+**面向自动化的脚本打包**
+Dolphi 支持通过 INI 配置文件进行命令行级别的自动化打包。该功能专为构建阶段设计，非常适合无缝接入 CI/CD 工作流、执行批量打包任务以及自动化测试发布（注：此功能用于打包过程自动化，而非客户端的静默安装）。
+
+**坚固的现代加密保护**
+针对现代分发场景的安全需求，Dolphi 采用了高强度的加密设计。它显著提高了密码验证的计算成本，有效抵御离线暴力破解攻击，为您的私有资源、商业分发文件及内部测试版本保驾护航。
+
+**深度的 Windows 资源管理器集成**
+安装后，Dolphi 将完美融入 Windows 右键菜单。无需繁琐地打开主界面，右键点击即可完成常用的压缩与打包操作。全面兼容 Windows 7、Windows 10 及 Windows 11，并支持简中、英文、日语及俄语多种界面语言。
+
+### 适用场景
+
+*   **日常用户：** 追求高效的文件打包、备份与快捷分享。
+*   **开发者与工作室：** 制作 Windows 软件安装包、发布便携版程序及分发游戏资产。
+*   **开源项目维护者：** 自动化构建 GitHub Releases，简化 Windows 用户的下载与使用门槛。
+
+### 下载与支持
+
+*   **最新版本下载：** [GitHub Releases](https://github.com/pkmnya/dolphi/releases/latest)
+*   **交流反馈（QQ群）：** [点击加入](https://qm.qq.com/q/wdYINMkdIA)
 
 ---
 
 <a id="english"></a>
-## 🇬🇧 English
 
-⚠️ **Beta Version Warning:**  
-*This software is currently in the **Beta** stage. It may contain severe bugs. Please use it with caution and do not use it to process critical data without making backups first.*
+# 🇬🇧 English
 
-### 📝 Introduction
-**Dolphi** is a simple, easy-to-use, and lightning-fast Windows compression utility powered by the highly efficient **Zstandard (Zstd)** algorithm. 
+> **Beta Warning**
+> Dolphi is currently in its Beta stage. While core features and Windows compatibility (including file handling, permissions, and path processing) have been tested, the tool performs fundamental file operations like extraction, installation, and uninstallation. Please ensure you back up important data before use.
 
-### ✨ Features
-*   **Installer Packaging Wizard:** Running the main `dolphi` executable opens the packaging wizard, allowing you to easily pack files into standalone installers complete with registry integration and uninstaller capabilities.
-*   **Context Menu Integration:** Once installed, Dolphi adds a convenient "quick compression" feature directly to your Windows context menu.
-*   **One-click Portable Operation:** Supports intuitive, portable one-click compression and one-click decompression.
-*   **High Performance:** Built on the Zstandard (Zstd) algorithm, offering an excellent balance between compression speed and ratio.
-*   **Multilingual Support:** 🇺🇸 English | 🇨🇳 Simplified Chinese | 🇯🇵 Japanese | 🇷🇺 Russian.
-*   The uninstaller based on the manifest will not accidentally delete configuration files or cause accidental deletion across paths (this feature has not been rigorously tested).
-*   The generated installation package can execute the setup wizard or self-extracting archive without requiring this software. The size of the self-extracting program is currently controlled at 129KB, with four built-in languages. When running in self-extracting mode, it automatically extracts to the same directory, so you do not need to worry about novice users asking questions like "how to extract".
-*   Anti-Brute-Force Encryption: Supports archive encryption. Features a built-in encryption scheme based on AES-256 and Monocypher, effectively mitigating offline brute-force attacks by increasing the computational cost of password verification.
+### Core Features
 
-### 💻 Compatibility
-*   **OS Support:** Basic functional full-path testing has been successfully completed and passed on Windows 7 Latest (US) and Windows 11 (CN).
+**High-Speed Zstandard Engine**
+Powered by the modern **Zstandard (Zstd)** algorithm, Dolphi moves away from the traditional obsession with extreme compression ratios. Instead, it offers an optimal balance between compression speed, extraction speed, and file size, making it ideal for modern software packages, game assets, and large file transfers.
 
-### 🤖 Development Method
-This project deeply utilized **Gemini** for programming assistance and was built using the **Vibecoding** approach.
+**Standalone Self-Extracting Packages (SFX)**
+Dolphi allows you to create independent self-extracting archives. Your recipients do not need Dolphi or any other extraction utility installed on their system. Upon execution, the package automatically extracts its contents directly into the current directory, perfect for portable applications, quick tools, and hassle-free file sharing.
 
-### 📥 Download
-👉 **[Download the Latest Release Here](https://github.com/pkmnya/dolphi/releases/latest)**
+**Professional Windows Installer Generation**
+For software distribution, Dolphi features an installer mode that creates standard Windows setup executables. Developers can easily define target directories, configure registry entries, and manage uninstallation routines to deliver a complete and professional deployment experience.
+
+**Standard ZIP Compatibility**
+While Dolphi excels in Windows-specific distribution, it retains full support for creating standard ZIP archives. This ensures seamless cross-platform compatibility when sharing files with macOS or Linux users, or when working with third-party archive utilities.
+
+**Multi-Volume Archives**
+Easily bypass upload limits and simplify the transfer of massive files. Dolphi supports splitting large archives into smaller, manageable volumes, making it highly suitable for game resource distribution and large package delivery.
+
+**Scriptable Automated Packaging**
+Designed with developers in mind, Dolphi supports automated package creation via INI configuration files. This is engineered specifically to integrate into CI/CD pipelines for batch packaging and reproducible builds (Note: This automates the *creation* of packages, not the silent installation process on the user's end).
+
+**Modern Encryption Protection**
+Security matters. Dolphi implements modern encryption designed specifically to protect distributed content. By intentionally increasing the computational cost of password verification, it significantly improves resistance against offline brute-force attacks, keeping your private resources and commercial files secure.
+
+**Seamless Windows Explorer Integration**
+Dolphi integrates directly into the Windows context menu. You can perform standard packing and archiving tasks with a simple right-click, without needing to open the main application interface. It is fully compatible with Windows 7, 10, and 11, and supports English, Simplified Chinese, Japanese, and Russian.
+
+### Use Cases
+
+*   **Everyday Users:** Fast and reliable file packing, backups, and sharing.
+*   **Developers & Studios:** Creating Windows releases, professional installers, portable apps, and game resource packages.
+*   **Open Source Maintainers:** Streamlining GitHub Releases and automated builds for an improved user experience on Windows.
+
+### Download
+
+*   **Latest Release:** [GitHub Releases](https://github.com/pkmnya/dolphi/releases/latest)
