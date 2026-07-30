@@ -22,6 +22,8 @@ Dolphi 是一款基于 **Zstandard (Zstd)** 算法的轻量级 Windows 压缩与
 > **Beta 版本提示**
 > Dolphi 目前处于 Beta 测试阶段。核心功能与 Windows 环境适配（如文件占用、权限、路径处理等）已完成初步测试。由于本工具涉及底层文件的压缩、释放及系统级别的安装卸载，在处理极为重要的数据前，建议您做好文件备份。欢迎在遇到问题时向我们提交 Issue。
 
+Dolphi 让文件分享像运行软件一样简单：一个小程序（128KB），双击即可使用。
+
 ### 核心特性
 
 **基于 Zstd 的高速压缩引擎**
@@ -67,6 +69,8 @@ Dolphi 支持通过 INI 配置文件进行命令行级别的自动化打包。�
 
 > **Beta Warning**
 > Dolphi is currently in its Beta stage. While core features and Windows compatibility (including file handling, permissions, and path processing) have been tested, the tool performs fundamental file operations like extraction, installation, and uninstallation. Please ensure you back up important data before use.
+
+Dolphi lets you send files like an application: one small executable（128KB）, double-click, ready to use.
 
 ### Core Features
 
