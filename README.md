@@ -1,5 +1,7 @@
 # Dolphi
 
+support EN CN JP RU
+
 **高效的 Windows 压缩与分发工具**
 
 Dolphi 是一款基于 **Zstandard (Zstd)** 算法的轻量级 Windows 压缩与分发工具。
